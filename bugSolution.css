@@ -1,0 +1,13 @@
+The solution is to avoid directly using the CSS variable within the `content` property of the pseudo-element. Instead, use JavaScript to manipulate the pseudo-element's content directly by setting the `textContent` or `innerHTML` property of the pseudo-element's parent element. This ensures that the pseudo-element's content is updated whenever the JavaScript variable changes.
+
+```css
+/* bugSolution.css */
+.my-element::before {
+  content: attr(data-content);
+}
+```
+
+```javascript
+// JavaScript to update the content of the pseudo-element
+document.querySelector('.my-element').setAttribute('data-content', 'New Content!');
+```
