@@ -1,0 +1,1 @@
+The CSS code has an unexpected behavior when a pseudo-element, such as `::before` or `::after`, interacts with the `content` property that contains a variable, and that variable is dynamically updated using JavaScript. The pseudo-element does not update its content when the variable is changed, which leads to the content not reflecting the current value of the variable.
